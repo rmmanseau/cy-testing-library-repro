@@ -27,7 +27,7 @@ describe('does not show failing assertion', () => {
 
   it('cy.findByTestId', () => {
     cy.mount(<App/>);
-    cy.findByTestId("code").contains(TEXT);
+    cy.findByTestId("code");
     cy.findByTestId("yeet").contains(TEXT);
   })
 })
