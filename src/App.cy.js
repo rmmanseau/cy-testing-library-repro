@@ -10,7 +10,8 @@ const TEXT = INCORRECT_TEXT;
 describe('shows failing assertion', () => {
   it('cy.get', () => {
     cy.mount(<App/>);
-    cy.get('[data-testid="code"]').contains(TEXT)
+    cy.get('[data-testid="code"]');
+    cy.get('[data-testid="yeet"]');
   })
 
   it('cy.find', () => {
@@ -28,6 +29,6 @@ describe('does not show failing assertion', () => {
   it('cy.findByTestId', () => {
     cy.mount(<App/>);
     cy.findByTestId("code");
-    cy.findByTestId("yeet").contains(TEXT);
+    cy.findByTestId("yeet");
   })
 })
